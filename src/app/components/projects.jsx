@@ -28,7 +28,7 @@ import Project from "./project";
 const projects = [
   {
     path: "prayer",
-    title: "PrayerHub",
+    title: "Prayers",
     descriptions: [
       "A full-stack Next.js application that enables users to create, share, and manage prayer requests within a supportive community. The platform features secure user authentication, personal prayer management, a community dashboard for browsing public requests, and privacy controls including anonymous posting options.",
     ],
