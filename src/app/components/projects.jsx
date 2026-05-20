@@ -5,7 +5,6 @@ import {
   ChatBubbleBottomCenterIcon,
   BriefcaseIcon,
   GlobeAmericasIcon,
-  WrenchIcon,
   ForwardIcon,
   MagnifyingGlassIcon,
   ScaleIcon,
@@ -22,10 +21,126 @@ import {
   BellIcon,
   LockClosedIcon,
   CircleStackIcon,
+  CloudIcon,
+  CurrencyDollarIcon,
+  BookOpenIcon,
+  WrenchIcon,
+  ChatBubbleLeftRightIcon,
 } from "@heroicons/react/20/solid";
 import Project from "./project";
 
 const projects = [
+  {
+    path: "vanguard-ai-assistant",
+    title: "Enterprise Multi-Agent AI Assistant",
+    descriptions: [
+      "Multi-agent AI assistant for Vanguard with Python – LangGraph for orchestration, LangChain for provider abstraction, ChromaDB for vector storage, and a Python-native MCP server for tool exposure. Built to demonstrate the three foundational patterns of production LLM application: agent orchestration, RAG, and tool use. ",
+    ],
+    features: [
+      {
+        name: "RAG (Retrieval Augmented Generation)",
+        description:
+          "End-to-end RAG pipeline ingesting and indexing internal knowledge base into ChromaDB for top-k retrieval grounding internal support agent. ",
+        icon: BookOpenIcon,
+      },
+      {
+        name: "Custom MCP Server",
+        description:
+          "Tools including web search, email sending, jira ticket creation, and audit logging exposed through local custom mcp server built with FastMCP.",
+        icon: WrenchIcon,
+      },
+      {
+        name: "Converstaion History Management",
+        description:
+          "Implemented an n-turn conversation history manager with summarization-based trimming to fit within the model context window ",
+        icon: ChatBubbleLeftRightIcon,
+      },
+    ],
+    images: ["/vanguard/vanguard-langsmith-chat.png"],
+  },
+  {
+    path: "hrs",
+    wideLayout: true,
+    title: "Stock Portfolio Analytics Platform",
+    descriptions: [
+      "Built a comprehensive financial analytics platform providing portfolio performance evaluation, market trend analysis, and retirement forecasting capabilities using over a decade of historical OHLCV market data.",
+    ],
+    features: [
+      {
+        name: "Data Visualization",
+        description:
+          "Developed an Angular frontend featuring interactive candlestick charts, portfolio dashboards, analytics summaries, and light/dark mode theming. ",
+        icon: CloudIcon,
+      },
+      {
+        name: "Projection Forecast",
+        description:
+          "Implemented a deterministic Buy/Sell/Hold recommendation engine drawing on return calculations, volatility metrics, trend analysis, and drawdown evaluation. ",
+        icon: CurrencyDollarIcon,
+      },
+      {
+        name: "Cloud Deployment",
+        description:
+          "Deployed backend services on Amazon EKS within a secure VPC architecture and hosted frontend with S3 and CloudFront. ",
+        icon: CloudIcon,
+      },
+    ],
+    images: [
+      "/fidelity/delta-tool.png",
+      "/fidelity/moving-averages.png",
+      "/fidelity/tickers.png",
+      "/fidelity/ben.png",
+      "/fidelity/buy.png",
+      "/fidelity/portfolio-dashboard.png",
+      "/fidelity/historical-bootstrap.png",
+      "/fidelity/holdings.png",
+      "/fidelity/recommendation-details.png",
+      "/fidelity/projection-details.png",
+      "/fidelity/monte-carlo.png",
+    ],
+  },
+  {
+    path: "hrs",
+    title: "Storm Stay",
+    wideLayout: true,
+    descriptions: [
+      "A hotel reservation platform supporting role-based access control. Administrators efficiently manage rooms and reservations, track key performance metrics, and view transaction history. Guests seamlessly navigate room openings, simulate secure booking workflows, and manage existing and past reservations.",
+    ],
+    features: [
+      {
+        name: "Cloud Deployment",
+        description:
+          "Containerized and deployed within AWS infrastructure to ensure scalability and reliability. ",
+        icon: CloudIcon,
+      },
+      {
+        name: "Stripe Integration",
+        description:
+          "Integrated Stripe API to simulate payment transactions, confirmations, and refund processing. ",
+        icon: CurrencyDollarIcon,
+      },
+      {
+        name: "Authentication and Authorization",
+        description:
+          "Integrated Spring Security with OAuth2 to enforce secure, multi-role authentication and authorization ",
+        icon: LockClosedIcon,
+      },
+    ],
+    images: [
+      "/hrs/hrs-admin-dashboard-filter.png",
+      "/hrs/hrs-admin-dashboard-details.png",
+      "/hrs/hrs-admin-reservations.png",
+      "/hrs/hrs-admin-blocks.png",
+      "/hrs/hrs-users.png",
+      "/hrs/hrs-metrics.png",
+      "/hrs/hrs-transactions.png",
+      "/hrs/hrs-landing.png",
+      "/hrs/hrs-available-rooms.png",
+      "/hrs/hrs-calendar-booking.png",
+      "/hrs/hrs-stripe.png",
+      "/hrs/hrs-cancel-reservation.png",
+    ],
+  },
   {
     path: "prayer",
     title: "Prayers",
