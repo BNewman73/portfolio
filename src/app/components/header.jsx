@@ -31,6 +31,12 @@ export default function Header() {
             Projects
           </Link>
           <Link
+            href="#certifications"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Certifications
+          </Link>
+          <Link
             href="#about"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
